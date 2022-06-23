@@ -1,0 +1,17 @@
+@use "../../styles/abtracts/" as *;
+
+.LabelJoke {
+  padding: 20px 0 20px 0;
+  background-color: $barley-corn;
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  p {
+    text-transform: uppercase;
+  }
+}

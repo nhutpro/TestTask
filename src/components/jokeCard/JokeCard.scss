@@ -1,0 +1,54 @@
+@use "../../styles/abtracts/" as *;
+.JokeCard {
+  min-height: 264px;
+  border: 4px solid $white;
+  padding: 16px 10px 16px 10px;
+  @include mobile {
+    min-height: 200px;
+  }
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.15);
+    border: solid 4px $white;
+  }
+
+  .JokeCard__Title {
+    display: flex;
+    p {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.25;
+      margin-left: 6px;
+    }
+    img {
+      width: 10px;
+      height: 18px;
+    }
+  }
+  .JokeCard__Main {
+    overflow: hidden;
+    p {
+      margin: 6px 0 32px;
+      width: 328px;
+      height: 154px;
+      line-height: 1.57;
+      @include mobile {
+        height: 150px;
+      }
+    }
+  }
+  .JokeCard__Path {
+    display: flex;
+    justify-content: flex-end;
+    p {
+      color: $barley-corn;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-right: 10px;
+    }
+    img {
+      width: 20px;
+      height: 16px;
+    }
+  }
+}

@@ -1,3 +1,1 @@
-Page : I will build three page : Home , List Joke , Detail Joke
-After check API. I just have api call all joke. therefore, i will do fake api for app to get joke
-base on category
+Plan: I Will check API and then I will identify usefull API. Afther that, I will build layout

@@ -1,0 +1,247 @@
+@use "../../styles/abtracts/" as *;
+.Header__Container {
+  color: $white-two;
+  font-size: 15px;
+  @include tablet {
+    width: 100%;
+  }
+  .Header__Top {
+    background: #303030;
+    display: flex;
+    justify-content: end;
+
+    .Header__Item {
+      margin: 20px 64px 21px;
+      display: flex;
+      justify-content: center;
+      @include tablet {
+        justify-content: space-around;
+      }
+      p {
+        width: 158px;
+        height: 19px;
+        @include tablet {
+          width: max-content;
+        }
+      }
+      &:first-child {
+        margin-left: 341px;
+        @include mobile {
+          display: none;
+        }
+        
+      }
+      &:nth-child(2) {
+        @include mobile {
+          display: none;
+        }
+        
+      }
+    
+      &:last-child {
+        cursor: pointer;
+        position: relative;
+        margin: 0 180px 0 0;
+        padding: 20px 64px 21px;
+        background-color: $barley-corn;
+        @include tablet {
+          margin-right: 20px;
+          padding: 20px 20px 21px;
+        }
+        @include mobile {
+        margin-right: 0;
+        }
+        p {
+          display: inline-block;
+        }
+      }
+      img {
+        display: block;
+        &:first-child {
+          margin-right: 10px;
+        }
+        &:last-child {
+          height: 16px;
+          width: 16px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        margin: 0 0 1px 0;
+        height: 19px;
+        width: 19px;
+        display: inline;
+      }
+      .Header__Sub {
+        font-size: 14px;
+        border-radius: 4px;
+        position: absolute;
+        top: 75px;
+        width: 100%;
+        color: #5e5e5e;
+        background-color: $white-two;
+        li {
+          border-bottom: 2px solid #b2b2b2;
+          padding: 8px 2px 0px 0px;
+          margin-left: 4px;
+          margin-right: 4px;
+          &:last-child {
+            border-bottom: none;
+          }
+          &:hover {
+            cursor: pointer;
+            p {
+              font-weight: 700;
+              color: $Subtle-suede;
+            }
+          }
+          p {
+            margin: 0 8px 7.5px;
+            line-height: 20px;
+          }
+        }
+        &::before {
+          position: absolute;
+          content: "";
+          top: -5px;
+          right: 15px;
+          width: 0;
+          height: 0;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          border-bottom: 8px solid white;
+        }
+      }
+    }
+  }
+  .Header__Bottom {
+    height: 341px;
+    background-image: url("../../../public/assets/assets_Homework_Front-End_01/bitmap@3x.png");
+    background-repeat: no-repeat;
+    background-size: 100% 341px;
+    text-align: center;
+    p {
+      &:first-child {
+        font-size: 48px;
+        margin: 0 174px 0 57px;
+        font-weight: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        color: $barley-corn;
+        @include tablet {
+          margin: 0;
+        }
+        @include tablet {
+          margin: 0;
+         
+        }
+      }
+      &:nth-child(2) {
+        margin: 0 174px 0 57px;
+        font-size: 22px;
+        font-weight: 500;
+        @include tablet {
+          margin: 0;
+        }
+        @include mobile {
+          font-size: 14px;
+        }
+      }
+    }
+    .Header__Search {
+      margin: 57px 174px 0 57px;
+      display: inline-block;
+      position: relative;
+      z-index: 2;
+      @include tablet {
+        margin: 57px 0px 0 0px;
+      }
+      form {
+        position: relative;
+
+        $this: &;
+        input {
+          height: 40px;
+          border: 1px solid white;
+          background: none;
+          width: 560px;
+
+          padding: 9px;
+          border-radius: 4px;
+          outline: none;
+          &:focus {
+            background: white;
+            #{$this} {
+              background: #303030;
+            }
+          }
+          @include mobile{
+            width: 280px;
+          }
+        }
+        button {
+          background: none;
+          top: 11px;
+          right: 11px;
+          position: absolute;
+          border: none;
+          // &::before {
+          //   width: 20px;
+          //   height: 20px;
+          //   content: "";
+          //   display: block;
+          //   background-image: url("../../../public/assets//assets_Homework_Front-End_01/search-copy@2x.png");
+          //   background-size: 20px 20px;
+          //   background-repeat: no-repeat;
+          // }
+          img {
+            height: 20px;
+          }
+        }
+      }
+      .Search--result {
+        top: 50px;
+        border-radius: 2px;
+        box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.12),
+          0 0 8px rgba($color: #000000, $alpha: 0.6);
+
+        width: 100%;
+
+        background: white;
+        position: absolute;
+        color: $black-one;
+        &::before {
+          position: absolute;
+          content: "";
+          top: -5px;
+          left: 15px;
+          width: 0;
+          height: 0;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          border-bottom: 8px solid white;
+        }
+        ul {
+          li {
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid $white;
+            font-size: 14px;
+            &:hover {
+              cursor: pointer;
+              background-color: #ccc;
+            }
+            p {
+              margin: 0 0 0 10px;
+            }
+            img {
+              width: 15px;
+              height: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

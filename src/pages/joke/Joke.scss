@@ -1,0 +1,342 @@
+@use "../../styles/abtracts/" as *;
+.Joke__Container {
+  width: 80%;
+  margin: 0 auto 50px auto;
+  @include tablet {
+    width: 90%;
+  }
+  .Joke__Back {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    button {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $black-one;
+      &::after {
+        width: 20px;
+        height: 20px;
+        content: "";
+        background-image: url("../../../public/assets/assets_Homework_Front-End_02/arrow-left@2x.png");
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        position: absolute;
+        top: 13px;
+        right: 13px;
+      }
+    }
+  }
+  .Joke__Main {
+    display: flex;
+    
+    justify-content: space-between;
+    @include tablet{
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    @include mobile {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .Joke {
+      width: 70%;
+      @include tablet {
+        margin-top: 20px;
+        width: 100%;
+      }
+      @include mobile {
+        width: 100%;
+        order: -1;
+      }
+      .Joke__Text {
+        padding: 16px;
+        border: 4px solid $white;
+        .Joke__Label {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 30px;
+          p {
+            position: relative;
+            &:first-child {
+              padding: 4px 20px;
+              border-radius: 8px;
+              background-color: $weird-green;
+              color: $white-two;
+              text-transform: uppercase;
+              &::before {
+                top: 11px;
+                left: 8px;
+                border-radius: 50%;
+                position: absolute;
+                content: "";
+                height: 4px;
+                width: 4px;
+                background-color: $white-two;
+              }
+            }
+          }
+          .Label--trending {
+            position: relative;
+            text-transform: uppercase;
+            color: $pale-orange;
+            font-size: 16px;
+            font-weight: 700;
+            &::before {
+              top: 7px;
+              left: -12px;
+              height: 8px;
+              width: 8px;
+              border-radius: 50%;
+              position: absolute;
+              content: "";
+
+              background-color: $pale-orange;
+            }
+          }
+          .Label--popular {
+            position: relative;
+            text-transform: uppercase;
+            color: $popular-label;
+            font-size: 16px;
+            font-weight: 700;
+            &::before {
+              top: 7px;
+              left: -12px;
+              height: 8px;
+              width: 8px;
+              border-radius: 50%;
+              position: absolute;
+              content: "";
+
+              background-color: $popular-label;
+            }
+          }
+          .Label--epic {
+            position: relative;
+            text-transform: uppercase;
+            color: $red-one;
+            font-size: 16px;
+            font-weight: 700;
+            &::before {
+              top: 7px;
+              left: -12px;
+              height: 8px;
+              width: 8px;
+              border-radius: 50%;
+              position: absolute;
+              content: "";
+
+              background-color: $red-one;
+            }
+          }
+        }
+        .Joke__Title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 30px;
+          .Title__Container {
+            position: relative;
+            background-color: $barley-corn;
+            height: 4px;
+            width: 80%;
+            p {
+              top: -29px;
+              position: absolute;
+              font-size: 40px;
+              font-weight: 600;
+              line-height: 1.5;
+              text-transform: uppercase;
+              color: $barley-corn;
+              background-color: $white-two;
+              @include tablet {
+               font-size: 22px;
+               top: -15px;
+              }
+              @include mobile {
+                top : -9px;
+               font-size: 13px;
+              }
+            }
+          }
+          & > p {
+            text-transform: uppercase;
+            font-size: 16px;
+            color: $barley-corn;
+            font-weight: 700;
+          }
+        }
+      }
+      .Joke__Interact {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        .Joke__Icon {
+          display: flex;
+          .Icon__Group--like {
+            cursor: pointer;
+
+            &:hover {
+              .Icon--like {
+                background-color: green;
+              }
+              & > p {
+                color: green;
+              }
+            }
+            text-align: center;
+            .Icon--like {
+              background-color: $weird-green;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              height: 50px;
+              width: 50px;
+              border-radius: 50%;
+              @include mobile {
+                height: 30px;
+                width: 30px;
+              }
+              img {
+                width: 20px;
+                height: 20px;
+              }
+            }
+            & > p {
+              margin-top: 10px;
+              font-weight: 700;
+              color: $weird-green;
+            }
+          }
+          .Icon__Group--dislike {
+            &:hover {
+              .Icon--dislike {
+                background-color: #ff0000;
+              }
+              & > p {
+                color: #ff0000;
+              }
+            }
+            cursor: pointer;
+            text-align: center;
+            .Icon--dislike {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-left: 10px;
+              height: 50px;
+              width: 50px;
+              border-radius: 50%;
+              background-color: $red-one;
+              @include mobile {
+                height: 30px;
+                width: 30px;
+              }
+              img {
+                width: 20px;
+                height: 20px;
+              }
+            }
+            & > p {
+              margin-top: 10px;
+              font-weight: 700;
+              color: $red-one;
+            }
+          }
+        }
+        .Joke__Button {
+          margin-top: 50px;
+          display: inline-flex;
+          .Button--prev {
+            cursor: pointer;
+            &:hover {
+              opacity: 0.8;
+            }
+            width: 200px;
+            background: transparent;
+            border: 2px solid $white;
+            padding: 20px 30px;
+            font-size: 16px;
+            font-weight: 700;
+            color: $barley-corn;
+            align-items: center;
+            height: 50px;
+            display: inline-flex;
+            text-transform: uppercase;
+            justify-content: center;
+            @include mobile {
+              width: 100px;
+              font-size: 13px;
+            }
+            img {
+              margin-right: 10px;
+              width: 20px;
+              height: 20px;
+              @include mobile {
+                margin-right: 5px;
+              }
+            }
+          }
+          .Button--next {
+            cursor: pointer;
+            &:hover {
+              opacity: 0.8;
+            }
+            width: 200px;
+            margin-left: 20px;
+            background: transparent;
+            border: 2px solid $white;
+            font-size: 16px;
+            font-weight: 700;
+            color: $barley-corn;
+            align-items: center;
+            height: 50px;
+            display: inline-flex;
+            text-transform: uppercase;
+            justify-content: center;
+            @include mobile {
+              width: 100px;
+              font-size: 13px;
+            }
+            img {
+              margin-left: 10px;
+              width: 20px;
+              height: 20px;
+              @include mobile {
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .Joke__List {
+      width: 25%;
+      border: 4px solid $white;
+      padding: 16px;
+      @include tablet{
+        width:  50%;
+      }
+      @include mobile {
+        margin-top: 20px;
+        width: 100%;
+      }
+      .List__Title {
+        font-weight: 700;
+        margin-top: 20px;
+        font-size: 16px;
+        font-style: 700;
+        text-transform: uppercase;
+      }
+      ul {
+        li {
+          text-decoration: underline;
+          margin-top: 20px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}

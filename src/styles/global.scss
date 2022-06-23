@@ -1,0 +1,37 @@
+@use "../styles/abtracts/" as *;
+@font-face {
+  font-family: Montserrat;
+  src: url("../../public/assets/Montserrat/Montserrat-Regular.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.displayNone {
+  display: None !important;
+}
+html {
+  overflow-x: hidden;
+}
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: unset;
+}
+
+img {
+  width: 100%;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+html {
+  color: $black-one;
+  font-size: 14px;
+  font-family: Montserrat;
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,115 @@
+@use "../../styles/abtracts/" as *;
+.ListJokes__Container {
+  min-height: 100vh;
+  .ListJokes__Main {
+    width: 80%;
+    margin: 40px auto 0 auto;
+    @include tablet {
+      width: 95%;
+    }
+    .ListJokes__LabelList {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      column-gap: 20px;
+      row-gap: 20px;
+      @include mobile {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .ListJokes__Current {
+      margin-top: 60px;
+      position: relative;
+      &::before {
+        top: 11px;
+        left: 8px;
+        border-radius: 50%;
+        position: absolute;
+        content: "";
+        height: 4px;
+        width: 100%;
+        background-color: $white;
+      }
+      p {
+        position: relative;
+        display: inline-block;
+        text-transform: uppercase;
+        &:first-child {
+          padding: 4px 20px;
+          border-radius: 8px;
+          background-color: $weird-green;
+          color: $white-two;
+          text-transform: uppercase;
+          &::before {
+            top: 11px;
+            left: 8px;
+            border-radius: 50%;
+            position: absolute;
+            content: "";
+            height: 4px;
+            width: 4px;
+            background-color: $white-two;
+          }
+        }
+      }
+    }
+    .ListJokes__CardList {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 20px;
+      row-gap: 20px;
+      @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    .More__container {
+      display: flex;
+      justify-content: center;
+      button {
+        display: flex;
+        align-items: center;
+        border: 2px solid $barley-corn;
+        margin-bottom: 20px;
+        outline: none;
+        border-color: $barley-corn;
+        color: $barley-corn;
+        text-transform: uppercase;
+        border-radius: 2px;
+        font-size: 14px;
+        font-weight: 600;
+        background-color: transparent;
+        height: 60px;
+        width: calc((100% - 80px) / 5);
+        @include mobile {
+            width: 150px;
+            height: 50px;
+        }
+        &:hover {
+          cursor: pointer;
+          opacity: 0.7;
+        }
+        img {
+          width: 16px;
+          height: 16px;
+          margin-left: 50px;
+          @include tablet {
+            margin-left: 10px;
+          }
+          @include mobile {
+            
+          }
+        }
+        p {
+          margin-left: 66px;
+          @include tablet {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}

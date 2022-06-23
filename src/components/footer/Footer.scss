@@ -1,0 +1,29 @@
+@use "../../styles/abtracts/" as *;
+.Footer__Container {
+  position: relative;
+  background: url("../../../public/assets/assets_Homework_Front-End_01/bitmap_2@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100% 168px;
+  height: 168px;
+  .Footer__Text {
+    text-transform: uppercase;
+    position: absolute;
+    top: 60px;
+    left: 200px;
+    @include mobile {
+            left: 40px;
+    }
+    p {
+      margin-bottom: 10px;
+      color: $white;
+      &:last-child {
+        color: $barley-corn;
+        margin-top: 20px;
+      }
+      img {
+        width: 19px;
+        height: 12px;
+      }
+    }
+  }
+}
